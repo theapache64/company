@@ -22,7 +22,7 @@
 				$password = $_POST['password'];
 				$con = mysqli_connect('localhost','root','mike','company');
 				if($con){
-					$query = "SELECT id FROM companies WHERE username = '$username' AND password='$password' AND is_active = 1;";
+					$query = "SELECT id FROM companies WHERE username = '$username' AND password='$password' AND is_active = 1 ORDER BY name; ";
 					$result = mysqli_query($con,$query);
 					$cmpId = null;
 					if($result->num_rows > 0){

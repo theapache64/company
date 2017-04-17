@@ -8,9 +8,7 @@ CREATE TABLE companies (
 	password VARCHAR(10) NOT NULL,
 	is_active TINYINT(4) NOT NULL DEFAULT 1,
 	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (id),
-	UNIQUE KEY (`username`),
-	UNIQUE KEY (`password`)
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE employees (
